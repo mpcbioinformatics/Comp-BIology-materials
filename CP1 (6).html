@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>CP1</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0"><p align="center">Capstone Project I – Clean-up raw geographical data</p></h1>
+
+<p align="center"><b>BEFORE STARTING THE ASSIGNMENT, PLEASE READ ALL OF THE INSTRUCTIONS</b></p>
+
+<h2 id="toc_1">Prerequisites</h2>
+
+<ul>
+<li>Prior to starting this Capstone, you should feel somewhat comfortable and be developing some confidence in using the command line</li>
+<li>Completion of the Command Line Quiz with at least an 80% or higher</li>
+<li>Completion of Labs 1 and 2 and solid understand of listed learning objectives on each</li>
+</ul>
+
+<h2 id="toc_2">Learning Goals</h2>
+
+<ul>
+<li>Practice doing projects in a paced setting that involves mutliple sessions working on various pieces and returning after breaks and reflection</li>
+<li>Completion of a project without any outside help (internal help strongly encouraged)</li>
+<li>Assessment of proficiency in the various learning objectives of Module 1 as a whole. <em>These are listed on the Module Overview page in Canvas and should be reviewed prior to getting started.</em></li>
+<li>Precisely follow step-by-step instructions to complete a data analysis project</li>
+</ul>
+
+<h2 id="toc_3">Learning Objectives</h2>
+
+<ul>
+<li>Examine raw real-world biological data from public database</li>
+<li>Practice using pipes</li>
+<li>Use <code>man</code> to learn options of commands such as <code>sort</code> and <code>less</code></li>
+<li>Proficiency of basic linux commands, such as <code>wc</code> and <code>ls</code></li>
+<li>Exposure to <code>awk</code></li>
+<li>Deconstruct a regular expression</li>
+<li>Use line count to calculate line differences during data processing</li>
+<li>Demonstrate proficiency navigating within a linux environment</li>
+</ul>
+
+<h2 id="toc_4">Step-by-Step Instructions</h2>
+
+<h5 id="toc_5">Imagine you are interested in public data on geographic distribution of a particular species. Here, I have downloaded museum collections from the repository <a href="https://www.gbif.org/">GBIF</a> for two subspecies of <a href="https://en.wikipedia.org/wiki/House_mouse">house mice</a>: <em>Mus musculus castaneus</em> and <em>Mus musculus domesticus</em>. Before starting, just as you’ve done for in class lab activities, <code>**clear your history**</code>. At the end of the project, you will save your history to a file to be included with tarball you will upload to Canvas. The commands you are asked to use throughout the step-by-step instructions will be checked in your history and if not present, you will lose points! This file is the equivalent of showing your work in a math class and will be weighted accordingly.</h5>
+
+<h5 id="toc_6">Often raw scientific data is quite messy and you will need to manually process these files to make use of them in your analysis. You’ll note that despite the file ending, this is not even a CSV file. For those who are more advanced, please note that since this is a formal assessment of the skills and tools you have learned thus far in the class, this will be an <strong><em>imperfect</em></strong> data analysis. There are several steps that could be much improved, but are limited by the current knowledge of the class. The important thing to realize is that the assessment is based on a solid demonstration of the learning objectives and what you are being asked to do, not on the quality of the final data analysis. There is still a LOT left to teach you this semester that will certainly improve this data analysis project!</h5>
+
+<p><strong>Pro-tip #1: Do not open the CSV files in excel, do not edit these files, and do not rename these files!!!.</strong></p>
+
+<p><strong>Pro-tip #2: Follow naming conventions precisely throughout the assignment! Failure to do so will delay grading and may impact your final score.</strong></p>
+
+<p><strong>Pro-tip #3: Save your history as you go similar to how you have done for lab assignments. When you do file redirection, use the option to append instead of overwriting.</strong></p>
+
+<h3 id="toc_7">Part A (3 pts):</h3>
+
+<ol>
+<li><p>Download both CSV files from canvas and upload them to your favorite VM or remote computer. <a href="https://auburn.instructure.com/courses/1428839/files/200496034/download?wrap=1">File 1</a> and <a href="https://auburn.instructure.com/courses/1428839/files/200496180/download?wrap=1">File 2</a>. Make sure to preserve the ORIGINAL names of these files upon downloading! (1 pt)</p></li>
+<li><p>Make a main project directory called NAME_Project1 (replace NAME with your last name) and navigate into this directory. Make sure you move the files you downloaded into this directory.</p></li>
+<li><p>Create two sub-directories in this main project directory, <strong>one for each dataset</strong>, called <code>DOM</code> and <code>CAST</code>. (2 pts)</p></li>
+<li><p>Examine one of the CSV files using <code>less -S</code>. (Note: the presence of this command and others throughout this assignment will be checked in the history file you submit at the end totalling 10 pts of your total grade!)</p>
+
+<blockquote>
+<p>The <code>–S</code> option turns off the default softwrapping that can be difficult for large tabular documents such as this one. You can scroll left and right and view each row on a single line. Read more about it using the command <code>man</code>.</p>
+</blockquote></li>
+<li><p>From examining the files, you should notice that you have records from two subspecies of mice – <em>M. castaneus</em> and <em>M. domesticus</em>. Explore the contents of each file and then copy them into the corresponding subdirectory based on the species records contained in the file. <strong>Make sure to copy and not move so that you have a backup of the originals if you make any mistakes!</strong></p></li>
+</ol>
+
+<h3 id="toc_8">Part B (20 pts):</h3>
+
+<h5 id="toc_9">For this step, you will manipulate the first file and then be asked to repeat the process on the other file. I recommend that once your command works, copy it to a text file named README.txt. Then you can re-use each successful command and only change the filename when repeating on the other file, streamlining this process.</h5>
+
+<ol>
+<li><p>Often, in data analysis, files can either have a header or not. This is usually only a single line of information that tells you what is in each column. Here, there is a header that you need to isolate and then remove. First, use the command <code>head</code> to get the header ONLY into a file named <code>DOM_header.txt</code>. (1 pts)</p></li>
+<li><p>Next, open the original file in a text editor and remove the header line (again, this should be the first line of the file). You can overwrite this file since you have a backup in the main directory, but do NOT rename the file! (1 pts)</p></li>
+<li><p>Now that you have removed the header line, the next step is to remove any possible duplicated records in this dataset. You should use the latitude/longitude coordiantes to do this step. First, go into the <code>DOM</code> directory.</p></li>
+<li><p>Use the command <code>sort</code> to sort the CSV file based on the column that contains the latitude coordinates. You will need to figure out which column this information is in from the header file and then sort the file by this column. </p>
+
+<blockquote>
+<p>Hint: use <code>man</code> to figure out how to sort based on a column/field/key, then specify the column you have determined contains this information based on the header file.</p>
+
+<p>Caveat: More advanced commands that we will learn later this semester would allow you to do this while specifying the delimiter, but sort crudely assumes any white space is a column break, so the result will be imperfect. </p>
+</blockquote></li>
+<li><p>Using the sorted output, remove duplicated records using the command <code>uniq</code>. Save the output with the non-duplicated records and name it <code>DOM_lat_uniq.txt</code>. (2 pts)</p>
+
+<blockquote>
+<p>You may choose to use pipes to complete the previous step and this step together in a single one line command argument, or redirect the output of the command <code>sort</code> to an intermediate file and do this in multiple steps. If you choose the latter, make sure the final file matches the correct naming convention.</p>
+</blockquote></li>
+<li><p>Repeat this process using the <code>DOM_lat_uniq.txt</code> as an input file. This time, remove duplicates based on the <strong><em>longitude</em></strong> coordinates. Again, use the header file to figure out the column that corresponds to this information. (Don’t forget to re-sort the file based on the longitude column before using the <code>uniq</code> command). Name this file <code>DOM_lat_long_uniq.txt</code>. Do NOT delete the input file! (2 pts)</p>
+
+<p>a. Compare the line count of this file to the original file and calculate the percent of duplicated records. Keep this information for your README file.</p>
+
+<blockquote>
+<p>Note: You may notice that this method does not identify a large amount of duplicated records. This is likely an underestimate as there are more advanced methods to determine duplicated records that involve more information than the latitude and longitude coordinates, but they are beyond the scope of this assessment, which presents a simplified data analysis project.</p>
+</blockquote></li>
+<li><p>Our next manipulation will be to isolate records from a particular museum from the unique records file. Use <code>grep</code> to extract the records collected by the Smithsonian only (<code>USNM</code>) from the input file <code>DOM_lat_long_uniq.txt</code> and name the output file <code>DOM_USNM.txt</code>. Use <code>wc</code> to calculate the proportion of records that are part of these collections to include in your README file. (2 pts)</p>
+
+<blockquote>
+<p>The proportions should again be based on the length of the original file. </p>
+</blockquote></li>
+<li><p>Use <code>awk</code> to produce a file that ONLY has the latitude and longitude coordinates. To do this, we will use a command you have not yet encountered <code>awk</code>. I have provided a template command argument below. The only thing you need to do is to replace X and Y (KEEP the $) with the column numbers for the latitude and longitude coordinates that you used when your sorted above. We will learn much more about <code>awk</code> in Module 3! </p>
+
+<p><code>awk &#39;FS=&quot;\t&quot; {print $X, $Y}&#39; DOM_USNM.txt &gt;DOM_USNM_lat_long.txt</code></p></li>
+<li><p>Examine the resulting file in <code>less</code> and note that there are several records missing latitude and longitude coordinates. To remove these blank lines, you have been provided with an advanced <code>grep</code> command below. Any remaining lines that have text rather than coordinates, remove manually via a text editor. (2 pts)</p>
+
+<p><code>grep -v &quot;^\s*$&quot; DOM_USNM_lat_long.txt &gt; DOM_lat_long_cleaned.txt</code></p>
+
+<blockquote>
+<p>Note: the pattern for grep is within quotes above. Some of these are regular expressions which you will encounter in Module 3. But the <code>*</code> you should recognize. Compare the file before and after and try to guess what the pattern is searching for.</p>
+</blockquote></li>
+<li><p>Repeat steps 1-9 on the CSV in the <code>CAST</code> folder. If you have not saved your commands throughout the process, use the up arrow or your command history to reveal past commands you have executed to speed this process up. (10 pts)</p></li>
+</ol>
+
+<h3 id="toc_10">Part C (21 pts):</h3>
+
+<ol>
+<li><p>Use the command <code>cat</code> to combine the cleaned records for both species into one file in the <strong><em>main project directory</em></strong> named <code>Lat_Long_USNM_combined.txt</code>. (5 pts)</p></li>
+<li><p>Also in the main directory, write a README file that very clearly explains what you’ve done to generate the final file, named <code>NAME.README.txt</code>. Be sure to include the calculations you were asked to do throughout Part B (these will be checked and deducted from your grade if not present). (5 pts)</p></li>
+<li><p>Redirect your history into a file named <code>NAME.history.txt</code> making sure it is also in your <strong>main project directory</strong>. (10 pts)</p>
+
+<blockquote>
+<p>You should have good practice with this step from Labs 1-2. Make sure to check this file includes all of the commands you were asked to type throughout this assessment to ensure you get full credit! </p>
+</blockquote></li>
+<li><p>Move up a directory from your project directory so that you can generate a tarball that you will need to upload to canvas. Name this tarball <code>NAME_Project_1.tgz</code>. See instructions from Labs #1 and #2 for how to do this step if you need a refresher. (1 pt)</p></li>
+</ol>
+
+<h2 id="toc_11">Reflection Questions (6 pts)</h2>
+
+<h5 id="toc_12">Lastly, respond to the following reflection questions, and upload your responses titled <code>NAME_reflection.txt</code> to canvas along with the tarball from Part C (6 pts):</h5>
+
+<ol>
+<li><p>How has this project changed your perspective on what raw biological data from a database looks like?</p></li>
+<li><p>Why did you sort BEFORE subsetting the latitude and longitude coordinates? Would you consider multiple samples from the same coordinates to be duplicates? How do you think duplicates would arise (remember that there are unique IDs associated with each entry in the dataset)?</p></li>
+<li><p>What additional information would you use to identify duplicated records in the dataset that were not done as part of this assignment? </p></li>
+</ol>
+
+
+
+
+</body>
+
+</html>
